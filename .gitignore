@@ -1,0 +1,31 @@
+# Node modules (if using npm for development)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Chrome extension development
+*.pem
+*.crx
+*.zip
+
+# Logs
+*.log
+
+# Local config
+config.local.js
+.env
+
+# Test coverage
+coverage/

@@ -1,0 +1,126 @@
+/* Poker Assistant Overlay Styles */
+
+.poker-assistant-recommendation {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-width: 250px;
+  animation: slideIn 0.3s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.poker-assistant-recommendation.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.pa-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64b5f6;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pa-recommendation {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Action-specific colors */
+.pa-recommendation:has-text("RAISE") {
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.pa-recommendation:has-text("CALL") {
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.pa-recommendation:has-text("FOLD") {
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.pa-recommendation:has-text("CHECK") {
+  color: #ff9800;
+  border: 1px solid #ff9800;
+}
+
+.pa-details {
+  font-size: 14px;
+  color: #b0bec5;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pa-details > div {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .poker-assistant-recommendation {
+    top: 10px;
+    right: 10px;
+    min-width: 200px;
+    padding: 15px;
+  }
+  
+  .pa-recommendation {
+    font-size: 20px;
+  }
+  
+  .pa-details {
+    font-size: 12px;
+  }
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .poker-assistant-recommendation {
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+  }
+}
+
+/* Hover effect */
+.poker-assistant-recommendation:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}

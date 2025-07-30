@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1>Poker Assistant</h1>
+    
+    <div class="status-section">
+      <div class="status-indicator" id="status"></div>
+      <span id="status-text">Checking status...</span>
+    </div>
+    
+    <div class="stats-section">
+      <h2>Session Statistics</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-label">Hands Analyzed</div>
+          <div class="stat-value" id="hands-count">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Win Rate</div>
+          <div class="stat-value" id="win-rate">-</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Profit/Loss</div>
+          <div class="stat-value" id="profit-loss">$0</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <h2>Settings</h2>
+      <label class="toggle">
+        <input type="checkbox" id="auto-analyze" checked>
+        <span>Auto-analyze hands</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="show-overlay" checked>
+        <span>Show recommendations</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="sound-alerts">
+        <span>Sound alerts</span>
+      </label>
+    </div>
+    
+    <div class="actions">
+      <button id="reset-stats">Reset Statistics</button>
+      <button id="open-settings">Advanced Settings</button>
+    </div>
+    
+    <div class="footer">
+      <a href="https://github.com/pselamy/poker-assistant-extension" target="_blank">GitHub</a>
+      <span>v1.0.0</span>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
